@@ -1,0 +1,11 @@
+6,	Total Time= 1	dif=  5.67
+7,	Total Time= 2	dif=  4.67
+8,	Total Time= 1	dif=  5.67
+	
+Total Time = 20
+Total_Time/Steps = 6.67
+Total differences = 16.00
+Average differences = 5.33
+Max Time = 2
+Min Time = 1
+------------------------------------

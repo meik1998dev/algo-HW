@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Upload Text File</title>
+    <style>
+        body {
+            background-color: #11091422;
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            color: #fff;
+            text-align: center;
+            margin-top: 100px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        form {
+            max-width: 2000px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: rgba(255, 255, 128, 0.9);
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="file"] {
+            display: block;
+            margin-bottom: 30px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background-color: #6b5b95;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #ff6f61;
+            transform: translateY(-2px);
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .names {
+            background-color: #f2f2f2;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .name {
+            width: 400px;
+            font-size: 30px;
+            font-weight: bold;
+            color: #6b5b95;
+            text-align: center;
+            margin: 20px auto;
+            border: 2px solid #6b5b95;
+            border-radius: 10px;
+            padding: 10px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .name:hover {
+            transform: scale(1.1);
+            border-color: #ff6f61;
+            color: #ff6f61;
+            cursor: pointer;
+        }
+
+        /* Added style */
+        input[type="number"] {
+            width: 50px;
+            margin-right: 10px;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="file"] {
+            background-color: #f2f2f2;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+    </style>
+    </style>
+</head>
+
+<body>
+    <h1>وظيفة الخوارزميات</h1>
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div>
+            <label for="file1" style="display: inline-block; margin-right: 10px; font-size: 30px;">Task:</label>
+            <input type="file" name="file1" id="file1" style="display: inline-block;">
+        </div>
+        <div>
+            <label for="file2" style="display: inline-block; margin-right: 10px; font-size: 30px;">Task Links:</label>
+            <input type="file" name="file2" id="file2" style="display: inline-block;">
+        </div>
+        <label for="name1" style="display: inline-block; margin-right: 10px; font-size: 30px;">Number of Tasks:</label>
+        <input type="number" name="name1" id="name1" value="26"
+            style="display: inline-block; width: 50px; margin-right: 10px; padding: 5px; border-radius: 5px; border: 1px solid #ccc; font-size: 30px;">
+        <label for="name1" style="display: inline-block; margin-right: 10px; font-size: 30px;">Number of Links:</label>
+        <input type="number" name="name2" id="name2" value="6"
+            style="display: inline-block; width: 50px; margin-right: 10px; padding: 5px; border-radius: 5px; border: 1px solid #ccc; font-size: 30px;">
+
+        <button type="submit" name="action" value="optimal" style="font-size: 30px;">Optimal</button>
+        <button type="submit" name="action" value="allsol" style="font-size: 30px;">All Solutions</button>
+    </form>
+
+    <div class="name">نجلاء قسيمي<br>najlaa_123821</div>
+    <div class="name">لينة المنصور<br>Leena_109967</div>
+    <div class="name">محمد العك<br>Mohammad_144733 </div>
+    <div class="name">إسراء ابو اللبن<br>esraa_129403</div>
+
+</body>
+
+</html>
